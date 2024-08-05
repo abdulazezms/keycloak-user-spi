@@ -1,7 +1,7 @@
 FROM quay.io/keycloak/keycloak:25.0.2
 
 # Copy the provider
-ADD --chown=keycloak:keycloak target/user-storage-spi-postgres.jar /opt/keycloak/providers
+ADD --chown=keycloak:keycloak target/user-storage-spi.jar /opt/keycloak/providers
 
 # Copy third party JARs (e.g., password hashing utilities for external credential store)
 ADD --chown=keycloak:keycloak target/third-party/*.jar /opt/keycloak/providers
